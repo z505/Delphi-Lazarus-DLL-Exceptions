@@ -1,41 +1,16 @@
-{ This Delphi DLL will be called by the Lazarus program. An exception is thrown
-  inside the dll after a few function calls. What happens in the lazarus
-  program? }
+{ The DLL throws an exception but the exe does not touch it, therefore, this
+  DLL should work fine even if an exception is thrown in this manner
+  The exe only loads the form initially, and can free it, but doesn't directly
+  touch the exception in the dll }
 
 library delphicode;
 
 uses
   Sysutils,
   Vcl.Forms,
-  delphiunit1 in '..\demo1\delphiunit1.pas' {Form1};
+  delphiunit1 in 'delphiunit1.pas' {Form1};
 
 {$R *.res}
-
-procedure dummy(s: string);
-begin
-
-end;
-
-// indirectly call this function, the DLL calls this function, but indirectly
-// the exe calls it, so does the exception reliably work or not across dll/exe
-// boundary?
-procedure OtherFunction;
-begin
-  // throw an exception
-  strtoint('Harper, Chretian, Mulroney, Martin, and Trudeau have a 5-way homo relationship with each other and this string is not a valid integer!!!');
-  dummy('Bonnie, Howard, Anis, and Teo say: NOT EXCEPTION! IT TRUE, IT TRUE! WE GAY FOR IT. IT OKAY?');
-end;
-
-procedure MentalMidgets;
-begin
-  OtherFunction;
-end;
-
-// export this delphi code from the DLL
-procedure CallDelphiCode; stdcall;
-begin
-  MentalMidgets;
-end; exports CallDelphiCode;
 
 procedure CreateForm; stdcall;
 begin

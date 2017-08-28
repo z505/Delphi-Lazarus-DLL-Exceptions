@@ -99,7 +99,7 @@
         <DelphiCompile Include="$(MainSource)">
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
-        <DCCReference Include="..\demo1\delphiunit1.pas">
+        <DCCReference Include="delphiunit1.pas">
             <Form>Form1</Form>
         </DCCReference>
         <BuildConfiguration Include="Release">
@@ -128,7 +128,7 @@
                 </Excluded_Packages>
             </Delphi.Personality>
             <Deployment Version="2">
-                <DeployFile LocalName="Win32\Debug\delphicode.exe" Configuration="Debug" Class="ProjectOutput">
+                <DeployFile LocalName="delphicode.dll" Configuration="Debug" Class="ProjectOutput">
                     <Platform Name="Win32">
                         <RemoteName>delphicode.exe</RemoteName>
                         <Overwrite>true</Overwrite>

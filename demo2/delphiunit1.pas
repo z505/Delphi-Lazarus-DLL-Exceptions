@@ -1,3 +1,8 @@
+{ The DLL throws an exception but the exe does not touch it, therefore, this
+  DLL should work fine even if an exception is thrown in this manner
+  The exe only loads the form initially, and can free it, but doesn't directly
+  touch the exception in the dll }
+
 unit delphiunit1;
 
 interface
@@ -28,9 +33,8 @@ begin
 
 end;
 
-// indirectly call this function, the DLL calls this function, but indirectly
-// the exe calls it, so does the exception reliably work or not across dll/exe
-// boundary?
+// the DLL calls this function, so the exception should reliably work
+// across dll/exe boundary
 procedure OtherFunction;
 begin
   // throw an exception
