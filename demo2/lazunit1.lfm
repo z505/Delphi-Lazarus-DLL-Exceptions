@@ -1,0 +1,46 @@
+object Form1: TForm1
+  Left = 258
+  Height = 270
+  Top = 210
+  Width = 400
+  Caption = 'Form1'
+  ClientHeight = 270
+  ClientWidth = 400
+  DesignTimePPI = 120
+  LCLVersion = '1.8.0.2'
+  object Button2: TButton
+    Left = 32
+    Height = 25
+    Top = 48
+    Width = 147
+    Caption = 'Create Form'
+    OnClick = Button2Click
+    TabOrder = 0
+  end
+  object Button3: TButton
+    Left = 32
+    Height = 25
+    Top = 136
+    Width = 147
+    Caption = 'Free Form'
+    OnClick = Button3Click
+    TabOrder = 1
+  end
+  object Label1: TLabel
+    Left = 39
+    Height = 20
+    Top = 98
+    Width = 244
+    Caption = 'Then click the button in the DLL form'
+    ParentColor = False
+  end
+  object Button1: TButton
+    Left = 40
+    Height = 25
+    Top = 232
+    Width = 75
+    Caption = 'BONUS'
+    OnClick = Button1Click
+    TabOrder = 2
+  end
+end

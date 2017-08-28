@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+  <Transactions>
+    <Transaction>2017/08/27 21:44:52.227,=C:\Users\Owner\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2017/08/27 21:47:07.036,C:\important\Delphi-Lazarus-DLL-Exceptions\trunk\demo1\delphiunit1.pas=C:\Users\Owner\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2017/08/27 21:47:07.036,C:\important\Delphi-Lazarus-DLL-Exceptions\trunk\demo1\delphiunit1.dfm=C:\Users\Owner\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2017/08/27 21:47:14.562,C:\important\Delphi-Lazarus-DLL-Exceptions\trunk\demo1\delphicode.dproj=C:\Users\Owner\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2017/08/27 22:48:56.522,C:\important\Delphi-Lazarus-DLL-Exceptions\trunk\demo2\delphicode.dproj=C:\important\Delphi-Lazarus-DLL-Exceptions\trunk\demo1\delphicode.dproj</Transaction>
+  </Transactions>
+</BorlandProject>
