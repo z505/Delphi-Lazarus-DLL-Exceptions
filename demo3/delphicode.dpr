@@ -1,7 +1,6 @@
 { This demo DLL catches exception to see the effects if the exe calls the code
-  The issue is, the exception must be caught as close to the code as possible
-  that generates the exception, and if that is done, it does prevent the
-  exception from reaching the exe }
+  The issue is, the exception must be caught in the dll, not the exe, to
+  prevent the exception from reaching the exe and causing undesired effects }
 
 library delphicode;
 

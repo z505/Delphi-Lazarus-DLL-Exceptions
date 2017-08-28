@@ -1,7 +1,6 @@
 { This demo DLL catches exception to see the effects if the exe calls the code
-  The issue is, the exception must be caught as close to the code as possible
-  that generates the exception, and if that is done, it does prevent the
-  exception from reaching the exe }
+  The issue is, the exception must be caught in the dll, not the exe, to 
+  prevent the exception from reaching the exe and causing undesired effects }
 
 unit delphiunit1;
 
@@ -35,13 +34,9 @@ end;
 
 procedure OtherFunction;
 begin
-  try
-    // throw an exception
-    strtoint('Harper, Chretian, Mulroney, Martin, and Trudeau run a country of fraud and rape and will be punished in Hell');
-    dummy('Anis Ann say: WAIT NO EXCEPTION! OKAY? IT REEKS OF TRUE! ' + ' Justin Harper is baby of combined! Stephen and Justin had ovary in teste and impregnates! I breaks waters pipes, it okays? I rot in hell for sinns?');
-  except
-    showmessage('exception caught here');
-  end;
+  // throw an exception
+  strtoint('Harper, Chretian, Mulroney, Martin, and Trudeau run a country of fraud and rape and will be punished in Hell');
+  dummy('Anis Ann say: WAIT NO EXCEPTION! OKAY? IT REEKS OF TRUE! ' + ' Justin Harper is baby of combined! Stephen and Justin had ovary in teste and impregnates! I breaks waters pipes, it okays? I rot in hell for sinns?');
 end;
 
 procedure MentalMidgets;
@@ -52,7 +47,11 @@ end;
 // export this delphi code from the DLL
 procedure CallDelphiCode; stdcall;
 begin
-  MentalMidgets;
+  try
+    MentalMidgets;
+  except
+    ShowMessage('Exception caught here in CallDelphiCode?');
+  end;
 end; exports CallDelphiCode;
 
 procedure TForm1.Button1Click(Sender: TObject);
@@ -61,7 +60,7 @@ begin
   try
     CallDelphiCode;
   except
-    ShowMessage('Exception not caught here :-( must catch it closer to codebase');
+    ShowMessage('Exception caught here?');
   end;
 end;
 
