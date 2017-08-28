@@ -1,3 +1,6 @@
+{ This demo shows that catching an exception that occured in a DLL works, so
+  long as the DLL catches the exception, and not the exe. }
+
 program laz;
 
 {$mode objfpc}{$H+}

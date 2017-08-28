@@ -1,8 +1,5 @@
-{ This demo shows that an exception works, so long as the DLL code executes
-  the code which raises the exception, and no Exe code interacts with the DLL
-  code to call the exception.  The DLL form button is clicked, so the dll
-  is raising an exception and no exe interaction occurs, the exe only loads
-  the dll form initially with the buttons. }
+{ This demo shows that catching an exception that occured in a DLL works, so
+  long as the DLL catches the exception, and not the exe. }
 
 unit lazunit1;
 
