@@ -38,8 +38,6 @@ const
   DLL = 'delphicode.dll';
 
 // Delphi DLL functions
-
-procedure CallDelphiCode; stdcall; external DLL;
 procedure CreateForm; stdcall; external DLL;
 procedure FreeForm; stdcall; external DLL;
 
