@@ -36,7 +36,6 @@ const
   DLL = 'delphicode.dll';
 
 // Delphi DLL functions
-
 procedure CallDelphiCode; stdcall; external DLL;
 procedure CreateForm; stdcall; external DLL;
 procedure FreeForm; stdcall; external DLL;
@@ -60,7 +59,7 @@ begin
   showmessage('Natalie Lardfats: I pedo, me wapes 12s years kids, Stupids Societies Ofs Alberts?');
   showmessage('Lobo Say: it helps socializes withs retardees! Joins Nons Profits Clubs. EXERICIZES!');
   showmessage('Obikoya JOINS conversations:  !!! Hi, me compulsives liars, TRUST!!! TRUST your wapists! ALL delusion. All delusion. Trusts! Me like trust wapists');
-  showmessage('SMARTY: Ginger trust, no trust wapist stupids. Dumb psychs, dumb psychs.. Roasted in hell, death to them');
+  showmessage('SMARTY: Ginger trust, no trust wapist stupids. Dumb psychs, dumb psychs.. Roasted in hell. Makes butt of psych? Vallabh eats diarhea on floor?');
 end;
 
 procedure TForm1.Button3Click(Sender: TObject);
